@@ -1,0 +1,196 @@
+name: CI
+
+on:
+    push:
+        branches: [main, develop]
+    pull_request:
+        branches: [main]
+
+jobs:
+    php-tests:
+        name: PHP Tests
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                php-version: ['7.4', '8.0', '8.1', '8.2', '8.3']
+                wordpress-version: ['6.7', 'latest']
+
+        services:
+            mysql:
+                image: mysql:5.7
+                env:
+                    MYSQL_ROOT_PASSWORD: password
+                    MYSQL_DATABASE: wordpress_test
+                ports:
+                    - 3306:3306
+                options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: ${{ matrix.php-version }}
+                  extensions: mysql, mbstring, zip
+                  coverage: xdebug
+
+            - name: Get Composer cache directory
+              id: composer-cache
+              run: echo "dir=$(composer config cache-files-dir)" >> $GITHUB_OUTPUT
+
+            - name: Cache Composer dependencies
+              uses: actions/cache@v3
+              with:
+                  path: ${{ steps.composer-cache.outputs.dir }}
+                  key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+                  restore-keys: ${{ runner.os }}-composer-
+
+            - name: Install Composer dependencies
+              run: composer install --prefer-dist --no-progress --no-suggest
+
+            - name: Setup WordPress test environment
+              run: |
+                  bash bin/install-wp-tests.sh wordpress_test root password 127.0.0.1:3306 ${{ matrix.wordpress-version }}
+
+            - name: Run PHPUnit tests
+              run: vendor/bin/phpunit --coverage-clover=coverage.xml
+
+            - name: Upload coverage to Codecov
+              uses: codecov/codecov-action@v3
+              with:
+                  file: ./coverage.xml
+                  flags: php
+                  name: php-${{ matrix.php-version }}-wp-${{ matrix.wordpress-version }}
+
+    php-quality:
+        name: PHP Code Quality
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.1'
+                  extensions: mysql, mbstring, zip
+
+            - name: Install Composer dependencies
+              run: composer install --prefer-dist --no-progress --no-suggest
+
+            - name: Run PHPCS
+              run: vendor/bin/phpcs
+
+            - name: Run PHPStan
+              run: vendor/bin/phpstan analyse --memory-limit=1G
+
+    javascript-tests:
+        name: JavaScript Tests
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [18, 20]
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Run JavaScript linting
+              run: npm run lint:js
+
+            - name: Run CSS linting
+              run: npm run lint:css
+
+            - name: Run JavaScript tests
+              run: npm run test:unit
+
+            - name: Build plugin
+              run: npm run build
+
+            - name: Upload build artifacts
+              uses: actions/upload-artifact@v3
+              with:
+                  name: build-files-node-${{ matrix.node-version }}
+                  path: build/
+
+    e2e-tests:
+        name: E2E Tests
+        runs-on: ubuntu-latest
+        needs: [php-tests, javascript-tests]
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Install Playwright browsers
+              run: npx playwright install --with-deps
+
+            - name: Build plugin
+              run: npm run build
+
+            - name: Start WordPress environment
+              run: npm run env:start
+
+            - name: Run E2E tests
+              run: npm run test:e2e
+
+            - name: Upload E2E test results
+              uses: actions/upload-artifact@v3
+              if: failure()
+              with:
+                  name: e2e-test-results
+                  path: test-results/
+
+    build-plugin:
+        name: Build Plugin Package
+        runs-on: ubuntu-latest
+        needs: [php-quality, javascript-tests]
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Setup Node.js
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '20'
+                  cache: 'npm'
+
+            - name: Install dependencies
+              run: npm ci
+
+            - name: Build plugin
+              run: npm run build
+
+            - name: Create plugin package
+              run: npm run plugin-zip
+
+            - name: Upload plugin package
+              uses: actions/upload-artifact@v3
+              with:
+                  name: weather-block-plugin
+                  path: weather-block.zip

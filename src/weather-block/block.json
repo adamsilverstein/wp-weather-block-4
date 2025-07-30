@@ -1,0 +1,92 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "weather-block/weather-display",
+	"version": "0.1.0",
+	"title": "Weather Display",
+	"category": "widgets",
+	"icon": "cloud",
+	"description": "Display current weather information from OpenWeatherMap API with customizable location, units, and display options.",
+	"keywords": [ "weather", "temperature", "forecast", "location", "climate" ],
+	"attributes": {
+		"location": {
+			"type": "string",
+			"default": ""
+		},
+		"units": {
+			"type": "string",
+			"default": "metric",
+			"enum": [ "metric", "imperial", "kelvin" ]
+		},
+		"displayMode": {
+			"type": "string",
+			"default": "current",
+			"enum": [ "current", "extended" ]
+		},
+		"showHumidity": {
+			"type": "boolean",
+			"default": true
+		},
+		"showPressure": {
+			"type": "boolean",
+			"default": false
+		},
+		"showWind": {
+			"type": "boolean",
+			"default": false
+		},
+		"showIcon": {
+			"type": "boolean",
+			"default": true
+		},
+		"backgroundColor": {
+			"type": "string",
+			"default": "#f8f9fa"
+		},
+		"textColor": {
+			"type": "string",
+			"default": "#212529"
+		},
+		"borderRadius": {
+			"type": "number",
+			"default": 8
+		}
+	},
+	"example": {
+		"attributes": {
+			"location": "London, UK",
+			"units": "metric",
+			"displayMode": "current",
+			"showHumidity": true,
+			"showIcon": true
+		}
+	},
+	"supports": {
+		"html": false,
+		"color": {
+			"background": true,
+			"text": true,
+			"gradients": true
+		},
+		"spacing": {
+			"padding": true,
+			"margin": true
+		},
+		"typography": {
+			"fontSize": true,
+			"lineHeight": true
+		},
+		"border": {
+			"radius": true,
+			"color": true,
+			"width": true,
+			"style": true
+		}
+	},
+	"textdomain": "weather-block",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js",
+	"render": "file:./render.php"
+}

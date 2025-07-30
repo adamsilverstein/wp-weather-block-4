@@ -1,0 +1,447 @@
+{
+	"config": {
+		"configFile": "/Users/adamsilverstein/repositories/wp-weather-block-4/playwright.config.js",
+		"rootDir": "/Users/adamsilverstein/repositories/wp-weather-block-4/tests/e2e",
+		"forbidOnly": false,
+		"fullyParallel": true,
+		"globalSetup": null,
+		"globalTeardown": null,
+		"globalTimeout": 0,
+		"grep": {},
+		"grepInvert": null,
+		"maxFailures": 0,
+		"metadata": {
+			"actualWorkers": 5
+		},
+		"preserveOutput": "always",
+		"reporter": [
+			[ "html", null ],
+			[
+				"json",
+				{
+					"outputFile": "test-results/playwright-results.json"
+				}
+			]
+		],
+		"reportSlowTests": {
+			"max": 5,
+			"threshold": 300000
+		},
+		"quiet": false,
+		"projects": [
+			{
+				"outputDir": "/Users/adamsilverstein/repositories/wp-weather-block-4/test-results",
+				"repeatEach": 1,
+				"retries": 0,
+				"metadata": {
+					"actualWorkers": 5
+				},
+				"id": "chromium",
+				"name": "chromium",
+				"testDir": "/Users/adamsilverstein/repositories/wp-weather-block-4/tests/e2e",
+				"testIgnore": [],
+				"testMatch": [ "**/*.@(spec|test).?(c|m)[jt]s?(x)" ],
+				"timeout": 30000
+			}
+		],
+		"shard": null,
+		"updateSnapshots": "changed",
+		"updateSourceMethod": "patch",
+		"version": "1.54.1",
+		"workers": 5,
+		"webServer": null
+	},
+	"suites": [
+		{
+			"title": "weather-block-standalone.spec.js",
+			"file": "weather-block-standalone.spec.js",
+			"column": 0,
+			"line": 0,
+			"specs": [],
+			"suites": [
+				{
+					"title": "Weather Block Standalone Visual Tests",
+					"file": "weather-block-standalone.spec.js",
+					"line": 10,
+					"column": 6,
+					"specs": [],
+					"suites": [
+						{
+							"title": "Block States",
+							"file": "weather-block-standalone.spec.js",
+							"line": 12,
+							"column": 7,
+							"specs": [
+								{
+									"title": "Weather block with data - current mode",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 0,
+													"parallelIndex": 0,
+													"status": "passed",
+													"duration": 344,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.069Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-f61a6c9c927042c84fe7",
+									"file": "weather-block-standalone.spec.js",
+									"line": 13,
+									"column": 3
+								},
+								{
+									"title": "Weather block with data - extended mode",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 1,
+													"parallelIndex": 1,
+													"status": "passed",
+													"duration": 349,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.056Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-91147f32f561b57c94ba",
+									"file": "weather-block-standalone.spec.js",
+									"line": 129,
+									"column": 3
+								},
+								{
+									"title": "Weather block loading state",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 2,
+													"parallelIndex": 2,
+													"status": "passed",
+													"duration": 359,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.040Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-fd8a448ba1536a7d6fc5",
+									"file": "weather-block-standalone.spec.js",
+									"line": 299,
+									"column": 3
+								},
+								{
+									"title": "Weather block error state",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 3,
+													"parallelIndex": 3,
+													"status": "passed",
+													"duration": 297,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.055Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-13e907e3d796c406c3cb",
+									"file": "weather-block-standalone.spec.js",
+									"line": 364,
+									"column": 3
+								},
+								{
+									"title": "Weather block placeholder state",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 4,
+													"parallelIndex": 4,
+													"status": "passed",
+													"duration": 296,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.061Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-3bdb25df9c1a9b320da3",
+									"file": "weather-block-standalone.spec.js",
+									"line": 419,
+									"column": 3
+								}
+							]
+						},
+						{
+							"title": "Responsive Design",
+							"file": "weather-block-standalone.spec.js",
+							"line": 466,
+							"column": 7,
+							"specs": [
+								{
+									"title": "Weather block responsive - mobile",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 4,
+													"parallelIndex": 4,
+													"status": "passed",
+													"duration": 171,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.622Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-6be1697ce82f1d209691",
+									"file": "weather-block-standalone.spec.js",
+									"line": 474,
+									"column": 4
+								},
+								{
+									"title": "Weather block responsive - tablet",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 3,
+													"parallelIndex": 3,
+													"status": "passed",
+													"duration": 173,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.622Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-91cd7f61d3b3d7399a0c",
+									"file": "weather-block-standalone.spec.js",
+									"line": 474,
+									"column": 4
+								},
+								{
+									"title": "Weather block responsive - desktop",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 0,
+													"parallelIndex": 0,
+													"status": "passed",
+													"duration": 202,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.659Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-a2bc2ce8395c4fe28cff",
+									"file": "weather-block-standalone.spec.js",
+									"line": 474,
+									"column": 4
+								}
+							]
+						},
+						{
+							"title": "Theme Variations",
+							"file": "weather-block-standalone.spec.js",
+							"line": 626,
+							"column": 7,
+							"specs": [
+								{
+									"title": "Weather block dark theme",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 1,
+													"parallelIndex": 1,
+													"status": "passed",
+													"duration": 195,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.667Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-fba2838fa089743ed4ea",
+									"file": "weather-block-standalone.spec.js",
+									"line": 627,
+									"column": 3
+								},
+								{
+									"title": "Weather block custom colors",
+									"ok": true,
+									"tags": [],
+									"tests": [
+										{
+											"timeout": 30000,
+											"annotations": [],
+											"expectedStatus": "passed",
+											"projectId": "chromium",
+											"projectName": "chromium",
+											"results": [
+												{
+													"workerIndex": 2,
+													"parallelIndex": 2,
+													"status": "passed",
+													"duration": 205,
+													"errors": [],
+													"stdout": [],
+													"stderr": [],
+													"retry": 0,
+													"startTime": "2025-07-29T22:08:43.681Z",
+													"annotations": [],
+													"attachments": []
+												}
+											],
+											"status": "expected"
+										}
+									],
+									"id": "3fb4c6d175f1c8c0fe79-4f94dd3c1dfc4db24b65",
+									"file": "weather-block-standalone.spec.js",
+									"line": 745,
+									"column": 3
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"errors": [],
+	"stats": {
+		"startTime": "2025-07-29T22:08:42.773Z",
+		"duration": 1134.479,
+		"expected": 10,
+		"skipped": 0,
+		"unexpected": 0,
+		"flaky": 0
+	}
+}

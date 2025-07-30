@@ -1,0 +1,726 @@
+# Copyright (C) 2025 The WordPress Contributors
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Weather Block 0.1.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-weather-block-4\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-07-29T22:21:09+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: weather-block\n"
+
+#. Plugin Name of the plugin
+#: weather-block.php:165
+msgid "Weather Block"
+msgstr ""
+
+#. Description of the plugin
+msgid "A comprehensive WordPress block for displaying weather information from OpenWeatherMap API."
+msgstr ""
+
+#. Author of the plugin
+msgid "The WordPress Contributors"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:61
+msgid "Testing API key..."
+msgstr ""
+
+#: admin/class-weather-block-admin.php:62
+#: admin/class-weather-block-admin.php:158
+msgid "API key is working correctly!"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:63
+msgid "API key test failed:"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:64
+msgid "Clearing cache..."
+msgstr ""
+
+#: admin/class-weather-block-admin.php:65
+msgid "Cache cleared successfully!"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:66
+msgid "Failed to clear cache:"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:67
+#: admin/views/settings-page.php:316
+msgid "Are you sure you want to clear all cached weather data?"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:105
+msgid "Weather Block: Please configure your OpenWeatherMap API key to start displaying weather data."
+msgstr ""
+
+#: admin/class-weather-block-admin.php:107
+msgid "Configure now"
+msgstr ""
+
+#. translators: %1$d: number of cache entries, %2$s: cache size
+#: admin/class-weather-block-admin.php:122
+msgid "Weather Block cache: %1$d entries using %2$s of storage."
+msgstr ""
+
+#: admin/class-weather-block-admin.php:136
+msgid "Security check failed."
+msgstr ""
+
+#: admin/class-weather-block-admin.php:141
+msgid "Insufficient permissions."
+msgstr ""
+
+#: admin/class-weather-block-admin.php:196
+msgid "Weather Block is configured and ready to use."
+msgstr ""
+
+#. translators: %1$d: number of cache entries, %2$s: cache size
+#: admin/class-weather-block-admin.php:204
+msgid "Cache: %1$d entries (%2$s)"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:213
+msgid "Weather Block needs configuration."
+msgstr ""
+
+#: admin/class-weather-block-admin.php:220
+msgid "Settings"
+msgstr ""
+
+#: admin/class-weather-block-admin.php:232
+msgid "Weather Block Status"
+msgstr ""
+
+#: admin/views/settings-page.php:19
+#: weather-block.php:164
+msgid "Weather Block Settings"
+msgstr ""
+
+#: admin/views/settings-page.php:34
+#: weather-block.php:195
+msgid "OpenWeatherMap API Key"
+msgstr ""
+
+#: admin/views/settings-page.php:47
+#: admin/views/settings-page.php:266
+msgid "Show"
+msgstr ""
+
+#: admin/views/settings-page.php:50
+#: admin/views/settings-page.php:309
+msgid "Test API Key"
+msgstr ""
+
+#. translators: %s: OpenWeatherMap signup URL
+#: admin/views/settings-page.php:57
+msgid "Enter your OpenWeatherMap API key. You can get a free API key from %s."
+msgstr ""
+
+#: admin/views/settings-page.php:78
+msgid "Cache Management"
+msgstr ""
+
+#: admin/views/settings-page.php:82
+msgid "Cache Entries:"
+msgstr ""
+
+#: admin/views/settings-page.php:86
+msgid "Cache Size:"
+msgstr ""
+
+#: admin/views/settings-page.php:92
+msgid "Weather data is cached for 15 minutes to improve performance and reduce API calls."
+msgstr ""
+
+#: admin/views/settings-page.php:96
+#: admin/views/settings-page.php:346
+msgid "Clear Cache"
+msgstr ""
+
+#: admin/views/settings-page.php:106
+msgid "How to Use"
+msgstr ""
+
+#: admin/views/settings-page.php:109
+msgid "Configure your API key above"
+msgstr ""
+
+#: admin/views/settings-page.php:110
+msgid "Add the Weather Block to any post or page"
+msgstr ""
+
+#: admin/views/settings-page.php:111
+msgid "Enter a location (city name, coordinates, etc.)"
+msgstr ""
+
+#: admin/views/settings-page.php:112
+msgid "Choose temperature units (Celsius, Fahrenheit, Kelvin)"
+msgstr ""
+
+#: admin/views/settings-page.php:113
+msgid "Select display mode (current weather or extended)"
+msgstr ""
+
+#: admin/views/settings-page.php:117
+msgid "The block will automatically display current weather conditions with temperature, description, and weather icon."
+msgstr ""
+
+#: admin/views/settings-page.php:123
+msgid "API Information"
+msgstr ""
+
+#: admin/views/settings-page.php:126
+msgid "Service:"
+msgstr ""
+
+#: admin/views/settings-page.php:131
+msgid "Free Plan:"
+msgstr ""
+
+#: admin/views/settings-page.php:132
+msgid "1,000 calls/day"
+msgstr ""
+
+#: admin/views/settings-page.php:136
+msgid "Cache Duration:"
+msgstr ""
+
+#: admin/views/settings-page.php:137
+msgid "15 minutes"
+msgstr ""
+
+#: admin/views/settings-page.php:141
+msgid "Caching reduces API calls and improves performance. Each unique location/units combination is cached separately."
+msgstr ""
+
+#: admin/views/settings-page.php:147
+msgid "Plugin Information"
+msgstr ""
+
+#: admin/views/settings-page.php:150
+msgid "Version:"
+msgstr ""
+
+#: admin/views/settings-page.php:155
+msgid "REST API:"
+msgstr ""
+
+#: admin/views/settings-page.php:160
+msgid "The plugin provides REST API endpoints for programmatic access to weather data."
+msgstr ""
+
+#: admin/views/settings-page.php:263
+msgid "Hide"
+msgstr ""
+
+#: admin/views/settings-page.php:282
+msgid "Testing..."
+msgstr ""
+
+#: admin/views/settings-page.php:292
+msgid "Success!"
+msgstr ""
+
+#: admin/views/settings-page.php:295
+msgid "Test location:"
+msgstr ""
+
+#: admin/views/settings-page.php:301
+msgid "Error:"
+msgstr ""
+
+#: admin/views/settings-page.php:306
+msgid "Failed to test API key. Please try again."
+msgstr ""
+
+#: admin/views/settings-page.php:324
+msgid "Clearing..."
+msgstr ""
+
+#: admin/views/settings-page.php:343
+msgid "Failed to clear cache. Please try again."
+msgstr ""
+
+#: build/weather-block/render.php:44
+#: src/weather-block/render.php:44
+msgid "Please enter a location to display weather information."
+msgstr ""
+
+#: build/weather-block/render.php:66
+#: src/weather-block/render.php:66
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:94
+msgid "Weather Error:"
+msgstr ""
+
+#. translators: %s: minimum temperature
+#: build/weather-block/render.php:140
+#: src/weather-block/render.php:140
+msgid "Low: %s"
+msgstr ""
+
+#. translators: %s: maximum temperature
+#: build/weather-block/render.php:149
+#: src/weather-block/render.php:149
+msgid "High: %s"
+msgstr ""
+
+#. translators: %s: feels like temperature
+#: build/weather-block/render.php:160
+#: src/weather-block/render.php:160
+msgid "Feels like %s"
+msgstr ""
+
+#: build/weather-block/render.php:178
+#: src/weather-block/render.php:178
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:222
+#: src/weather-block/edit.js:259
+msgid "Humidity:"
+msgstr ""
+
+#: build/weather-block/render.php:185
+#: src/weather-block/render.php:185
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:233
+msgid "Pressure:"
+msgstr ""
+
+#: build/weather-block/render.php:192
+#: src/weather-block/render.php:192
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:244
+msgid "Wind:"
+msgstr ""
+
+#. translators: %s: humidity percentage
+#: build/weather-block/render.php:210
+#: src/weather-block/render.php:210
+msgid "Humidity: %s"
+msgstr ""
+
+#. translators: %s: last updated time
+#: build/weather-block/render.php:222
+#: src/weather-block/render.php:222
+msgid "Updated: %s"
+msgstr ""
+
+#: build/weather-block/render.php:223
+#: src/weather-block/render.php:223
+msgid "ago"
+msgstr ""
+
+#: includes/class-weather-api.php:45
+msgid "Location cannot be empty."
+msgstr ""
+
+#: includes/class-weather-api.php:54
+msgid "OpenWeatherMap API key is not configured."
+msgstr ""
+
+#: includes/class-weather-api.php:127
+msgid "Failed to connect to weather service."
+msgstr ""
+
+#: includes/class-weather-api.php:147
+msgid "Empty response from weather service."
+msgstr ""
+
+#: includes/class-weather-api.php:157
+msgid "Invalid response from weather service."
+msgstr ""
+
+#: includes/class-weather-api.php:175
+msgid "Invalid weather data received."
+msgstr ""
+
+#: includes/class-weather-api.php:217
+msgid "Invalid API key. Please check your OpenWeatherMap API key."
+msgstr ""
+
+#: includes/class-weather-api.php:219
+msgid "Location not found. Please check the location name."
+msgstr ""
+
+#: includes/class-weather-api.php:221
+msgid "API rate limit exceeded. Please try again later."
+msgstr ""
+
+#: includes/class-weather-api.php:225
+msgid "Weather service is temporarily unavailable."
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: includes/class-weather-api.php:229
+msgid "Weather service error (HTTP %d)."
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:95
+msgid "Location parameter is required."
+msgstr ""
+
+#. translators: %d: number of cache entries cleared
+#: includes/class-weather-rest-controller.php:148
+msgid "Cleared %d cache entry."
+msgid_plural "Cleared %d cache entries."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/class-weather-rest-controller.php:206
+msgid "API key is working correctly."
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:228
+msgid "Weather service is not configured."
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:246
+msgid "You do not have permissions to perform this action."
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:264
+msgid "The location to get weather for (city name, coordinates, etc.)"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:273
+msgid "The units system to use (metric, imperial, kelvin)"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:313
+msgid "Location information"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:317
+msgid "City name"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:321
+msgid "Country code"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:327
+msgid "Temperature information"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:331
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:159
+msgid "Current temperature"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:335
+msgid "Feels like temperature"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:339
+msgid "Minimum temperature"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:343
+msgid "Maximum temperature"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:349
+msgid "Weather conditions"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:353
+msgid "Main weather condition"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:357
+msgid "Weather description"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:361
+msgid "Weather icon code"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:365
+msgid "Weather icon URL"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:371
+msgid "Humidity percentage"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:375
+msgid "Atmospheric pressure"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:379
+msgid "Wind information"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:383
+msgid "Wind speed"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:387
+msgid "Wind direction in degrees"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:393
+msgid "Visibility in meters"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:397
+msgid "Last update timestamp"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:401
+msgid "Cache information"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:405
+msgid "Whether data is from cache"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:409
+msgid "Cache timestamp"
+msgstr ""
+
+#: includes/class-weather-rest-controller.php:413
+msgid "Time left until cache expires"
+msgstr ""
+
+#: weather-block.php:188
+msgid "API Configuration"
+msgstr ""
+
+#: weather-block.php:207
+msgid "You do not have sufficient permissions to access this page."
+msgstr ""
+
+#: weather-block.php:217
+msgid "Configure your OpenWeatherMap API settings below. You can get a free API key from"
+msgstr ""
+
+#: weather-block.php:226
+msgid "Enter your OpenWeatherMap API key. This key will be used to fetch weather data."
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:85
+msgid "Loading weather data…"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:105
+msgid "Enter a location to preview weather data"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:125
+msgid "Weather preview"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:134
+msgid "Weather icon"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:147
+msgid "Unknown Location"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:176
+msgid "Low:"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:183
+msgid "High:"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:192
+msgid "Feels like"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:208
+msgid "No description available"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:267
+msgid "Cached data"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:268
+msgid "Live data"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:329
+msgid "Failed to fetch weather data"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:380
+msgid "Current"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:388
+msgid "Extended"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:395
+msgid "Weather Settings"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:399
+msgid "Location"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:404
+msgid "Enter city name, coordinates, etc."
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:408
+msgid "Examples: \"London, UK\", \"New York, NY\", \"40.7128,-74.0060\""
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:418
+msgid "Temperature Units"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:422
+msgid "Celsius (°C)"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:426
+msgid "Fahrenheit (°F)"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:430
+msgid "Kelvin (K)"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:441
+msgid "Display Mode"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:445
+msgid "Current weather only"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:452
+msgid "Extended information"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:466
+msgid "Display Options"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:470
+msgid "Show weather icon"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:478
+msgid "Show humidity"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:488
+msgid "Show pressure"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:496
+msgid "Show wind information"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:510
+msgid "Appearance"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:521
+msgid "Background Color"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:541
+msgid "Text Color"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:554
+msgid "Border Radius (px)"
+msgstr ""
+
+#: build/weather-block/index.js:1
+#: src/weather-block/edit.js:578
+msgid "Reset Appearance"
+msgstr ""
+
+#: build/weather-block/block.json
+#: src/weather-block/block.json
+msgctxt "block title"
+msgid "Weather Display"
+msgstr ""
+
+#: build/weather-block/block.json
+#: src/weather-block/block.json
+msgctxt "block description"
+msgid "Display current weather information from OpenWeatherMap API with customizable location, units, and display options."
+msgstr ""
+
+#: build/weather-block/block.json
+#: src/weather-block/block.json
+msgctxt "block keyword"
+msgid "weather"
+msgstr ""
+
+#: build/weather-block/block.json
+#: src/weather-block/block.json
+msgctxt "block keyword"
+msgid "temperature"
+msgstr ""
+
+#: build/weather-block/block.json
+#: src/weather-block/block.json
+msgctxt "block keyword"
+msgid "forecast"
+msgstr ""
+
+#: build/weather-block/block.json
+#: src/weather-block/block.json
+msgctxt "block keyword"
+msgid "location"
+msgstr ""
+
+#: build/weather-block/block.json
+#: src/weather-block/block.json
+msgctxt "block keyword"
+msgid "climate"
+msgstr ""

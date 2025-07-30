@@ -1,0 +1,19 @@
+parameters:
+	level: 5
+	paths:
+		- weather-block.php
+		- includes/
+		- admin/
+	excludePaths:
+		- node_modules/
+		- vendor/
+		- build/
+		- tests/
+	bootstrapFiles:
+		- phpstan-bootstrap.php
+	ignoreErrors:
+		# WordPress global variables
+		- '#Undefined variable: \$wpdb#'
+		- '#Undefined variable: \$wp_query#'
+		- '#Undefined variable: \$post#'
+	checkMissingIterableValueType: false
